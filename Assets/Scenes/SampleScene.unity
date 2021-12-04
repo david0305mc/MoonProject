@@ -995,10 +995,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 217.4
-    height: 211.7
-  CameraClampTopLeftPosition: {x: -66.14021, y: 101.67599, z: 35.28814}
-  CameraClampBottomRightPosition: {x: 151.25978, y: -110.02401, z: 35.28814}
+    width: 273.3
+    height: 303.7
+  CameraClampTopLeftPosition: {x: -94.09021, y: 147.676, z: 35.28814}
+  CameraClampBottomRightPosition: {x: 179.20978, y: -156.02402, z: 35.28814}
 --- !u!4 &1679341450
 Transform:
   m_ObjectHideFlags: 0
