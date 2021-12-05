@@ -40,19 +40,22 @@ public class SceneManager : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
-		this.Design.SetActive(false);
+		//this.Design.SetActive(false);
 
 		this._itemInstances = new Dictionary<int, BaseItemScript>();
 
-		/* registering events */
-		CameraManager.instance.OnItemTap += this.OnItemTap;
+        /* registering events */
+
+#if MoonTest
+          CameraManager.instance.OnItemTap += this.OnItemTap;
 		CameraManager.instance.OnItemDragStart += this.OnItemDragStart;
 		CameraManager.instance.OnItemDrag += this.OnItemDrag;
 		CameraManager.instance.OnItemDragStop += this.OnItemDragStop;
 		CameraManager.instance.OnTapGround += this.OnTapGround;
+        GroundManager.instance.UpdateAllNodes();
+#endif
 
-		GroundManager.instance.UpdateAllNodes();
-		this.Init();
+        this.Init();
 	}
 
 	/// <summary>
@@ -410,12 +413,15 @@ public class SceneManager : MonoBehaviour
 	public void LoadUserScene()
 	{
 		this.ClearScene();
-		SceneData sceneData = DataBaseManager.instance.GetScene();
+
+#if MoonTest
+        SceneData sceneData = DataBaseManager.instance.GetScene();
 
 		foreach (ItemData itemData in sceneData.items)
 		{
 			this.AddItem(itemData.itemId, itemData.instanceId, itemData.posX, itemData.posZ, true, true);
 		}
+#endif
 
 		//LOAD UNITS ON CAMP
 		BaseItemScript[] armyCamps = GetArmyCamps();
