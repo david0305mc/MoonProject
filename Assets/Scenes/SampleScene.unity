@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 231417519}
   - component: {fileID: 231417520}
   - component: {fileID: 231417521}
+  - component: {fileID: 231417522}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -317,6 +318,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 336642dfaa038bf49b2591c94c1c67f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &231417522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231417517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2dd17ab16a17344b65b704e1fd1720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &516384819
@@ -735,9 +748,9 @@ MonoBehaviour:
   Design: {fileID: 0}
   GameOverlayWindow: {fileID: 1026962927626620, guid: 93d4a9a0679ea4e598d2139cf56db508, type: 3}
   AttackOverlayWindow: {fileID: 0}
-  ShopWindow: {fileID: 0}
+  ShopWindow: {fileID: 1678858075550006, guid: 5a1c81eb361b2411dbf7194926caf3d1, type: 3}
   SceneEnteringWindow: {fileID: 1558085284865896, guid: 0d49e445c60ee449b8915c17f4b3b047, type: 3}
-  BuildersBusyWindow: {fileID: 0}
+  BuildersBusyWindow: {fileID: 1302423457251904, guid: 422c824df08574a0c9154475ae212869, type: 3}
   ResultWindow: {fileID: 0}
   TrainTroopsWindow: {fileID: 0}
   ItemOptionsWindow: {fileID: 0}
