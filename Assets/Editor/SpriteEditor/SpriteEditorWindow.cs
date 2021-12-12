@@ -97,7 +97,7 @@ public class SpriteEditorWindow : EditorWindow {
 		spriteCollection = Resources.Load("SpriteCollection", typeof(SpriteCollection)) as SpriteCollection;
 		if (spriteCollection == null) {
 			SpriteCollection asset = ScriptableObject.CreateInstance<SpriteCollection> ();
-			string path = "Assets/City Builder Template/Resources/SpriteCollection.asset";
+			string path = "Assets/Resources/SpriteCollection.asset";
 			AssetDatabase.CreateAsset (asset, path);
 			AssetDatabase.SaveAssets ();
 			AssetDatabase.Refresh();
