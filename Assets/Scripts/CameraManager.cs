@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -66,7 +66,7 @@ public class CameraManager : MonoBehaviour
 	{
 		instance = this;
 		this._layerMaskBaseItemCollider = LayerMask.GetMask("BaseItemCollider");
-		this._layerMaskGroundCollider = LayerMask.GetMask("Ground");
+		this._layerMaskGroundCollider = LayerMask.GetMask("GroundCollider");
 	}
 
 	void Update()
