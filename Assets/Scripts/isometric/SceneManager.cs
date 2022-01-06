@@ -46,8 +46,9 @@ public class SceneManager : MonoBehaviour
 
         /* registering events */
 
-#if MoonTest
-          CameraManager.instance.OnItemTap += this.OnItemTap;
+#if !MoonTest
+      
+		CameraManager.instance.OnItemTap += this.OnItemTap;
 		CameraManager.instance.OnItemDragStart += this.OnItemDragStart;
 		CameraManager.instance.OnItemDrag += this.OnItemDrag;
 		CameraManager.instance.OnItemDragStop += this.OnItemDragStop;
