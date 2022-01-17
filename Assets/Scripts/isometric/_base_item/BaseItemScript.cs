@@ -641,7 +641,10 @@ public class BaseItemScript : MonoBehaviour
 			frame = 0;
 		}
 
-		this.Renderer.GetRenderQuads()[0].GetComponent<TextureSheetAnimationScript>().SetFrame(frame);
+#if MoonTest
+this.Renderer.GetRenderQuads()[0].GetComponent<TextureSheetAnimationScript>().SetFrame(frame);
+#endif
+
 	}
 
 	//walk the item to home for builder

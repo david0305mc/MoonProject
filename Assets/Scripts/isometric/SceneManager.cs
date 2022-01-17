@@ -415,12 +415,15 @@ public class SceneManager : MonoBehaviour
 	{
 		this.ClearScene();
 
-#if MoonTest
+#if !MoonTest
         SceneData sceneData = DataBaseManager.instance.GetScene();
 
 		foreach (ItemData itemData in sceneData.items)
 		{
-			this.AddItem(itemData.itemId, itemData.instanceId, itemData.posX, itemData.posZ, true, true);
+			if (itemData.itemId == 3635)
+			{
+				this.AddItem(itemData.itemId, itemData.instanceId, itemData.posX, itemData.posZ, true, true);
+			}
 		}
 #endif
 
